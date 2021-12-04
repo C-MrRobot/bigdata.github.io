@@ -26,7 +26,7 @@
 <meta property="og:description" content="##1.查看用户密码策略 1$charge -l root ##2.查看应用进程和占用端口和启动时间 1234$ps -ef|grep nodeagent$ps -ef|grep $&amp;#123;pid&amp;#125;$netstat -anp|grep $&amp;#123;pid&amp;#125;$ps -o lstart $&amp;#123;pid&amp;#125; ##3.修改目录及文件权限 1234$chmod -R">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-12-04T00:36:37.000Z">
-<meta property="article:modified_time" content="2021-12-04T05:23:01.048Z">
+<meta property="article:modified_time" content="2021-12-04T05:24:27.398Z">
 <meta property="article:author" content="MrRobot.C">
 <meta name="twitter:card" content="summary">
   <!-- Canonical links -->
@@ -342,7 +342,7 @@
 <p>##2.查看应用进程和占用端口和启动时间</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ps</span> -ef|grep nodeagent</span><br><span class="line"><span class="variable">$ps</span> -ef|grep <span class="variable">$&#123;pid&#125;</span></span><br><span class="line"><span class="variable">$netstat</span> -anp|grep <span class="variable">$&#123;pid&#125;</span></span><br><span class="line"><span class="variable">$ps</span> -o lstart <span class="variable">$&#123;pid&#125;</span></span><br></pre></td></tr></table></figure>
 <p>##3.修改目录及文件权限</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> -R 755 /opt/client/</span><br><span class="line"><span class="variable">$chmod</span> 777 test.py</span><br><span class="line"><span class="variable">$chown</span> -R root:root /oot/client/</span><br><span class="line">chown root:root test.py</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$chmod</span> -R 755 /opt/client/</span><br><span class="line"><span class="variable">$chmod</span> 777 test.py</span><br><span class="line"><span class="variable">$chown</span> -R root:root /oot/client/</span><br><span class="line"><span class="variable">$chown</span> root:root test.py</span><br></pre></td></tr></table></figure>
 <p>##4.导出某目录文件权限并快速恢复</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$getfacl</span> -pR /opt &gt;&gt; /tmp/systemp.bak</span><br><span class="line"><span class="variable">$setfacl</span> --restore=/tmp/systemp.bak</span><br></pre></td></tr></table></figure>
 <p>##5.创建用户并加入用户组</p>
